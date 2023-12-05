@@ -15,9 +15,15 @@ body {
   }
   
   /* Navigation Bar */
-  .navbar {
-    background-color: #343a40 !important;
-  }
+
+    .navbar {
+      position: sticky;
+      top: 0px;
+      background-color: #343a40 !important;
+      z-index: 9999; /* Make sure it stays on top */
+    }
+
+  
   
   .navbar-dark .navbar-nav .nav-link {
     color: #fff;
