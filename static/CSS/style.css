@@ -1,9 +1,11 @@
-/* Body and general styles */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
 /* Body and general styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    background-color: #333;
+    color: #ffffff;
     margin: 0;
     /* padding-top: 70px; Remove or adjust this line */
   }
@@ -30,7 +32,7 @@ body {
   }
   
   .navbar-dark .navbar-nav .nav-link:hover {
-    color: #ccc;
+    color: aqua;
   }
   
   /* Sections */
@@ -53,10 +55,10 @@ body {
   }
   
   .card-body {
-    background-color: #fff;
+    background-color: #333;
     border-radius: 4px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.952);
   }
   
   .card-title {
@@ -69,11 +71,36 @@ body {
   }
   
   .btn-primary {
-    background-color: #007bff;
+    background-color: #0056b3;
+    color: #fff;
     border: none;
   }
   
   .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: aqua;
+    color: #333;
   }
   
+
+  /* Optional: Style the typing animation */
+.typewriter {
+  color: aqua;
+  overflow: hidden; /* Ensures the text is not revealed until the animation */
+  border-right: 0.08em solid aqua; /* Cursor effect */
+  white-space: nowrap; /* Keeps the text on one line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.1em; /* Adjust spacing between characters */
+  animation: typing 3.5s steps(40, end), blink-caret 0.5s step-end infinite alternate;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Cursor animation (optional) */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: aqua; }
+}
