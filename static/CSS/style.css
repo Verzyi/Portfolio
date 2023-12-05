@@ -74,6 +74,7 @@ body {
     background-color: #0056b3;
     color: #fff;
     border: none;
+    border-radius: 15px;
   }
   
   .btn-primary:hover {
