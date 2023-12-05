@@ -27,6 +27,21 @@ body {
       z-index: 9999; /* Make sure it stays on top */
     }
 
+    .social-link img{
+      margin: 0 5px;
+      border-radius: 10%;
+    }    
+
+/* Apply hover effect to the social links */
+.social-link:hover img {
+  background-color: aqua;
+  border-radius: 10%;
+  filter: brightness(1); /* Adjust brightness on hover */
+}
+
+#github-Logo {
+  border-radius: 50% !important;
+}
   
   
   .navbar-dark .navbar-nav .nav-link {
