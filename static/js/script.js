@@ -42,7 +42,6 @@ const skillColors = {
     'CSS': 'pink',
     'SQL': 'green',
     'Git': 'brown'
-    
 
     // Add more skills and colors as needed
 };
@@ -84,6 +83,61 @@ for (let i = 0; i < skillButtons.length; i++) {
         filterProjects();
     });
 }
+
+function createDropdown() {
+    const tableHeaders = document.querySelectorAll('#skillsTable thead th');
+    const dropdown = document.getElementById('skillsDropdown');
+  
+    tableHeaders.forEach(header => {
+      const option = document.createElement('option');
+      option.value = header.innerText;
+      option.textContent = header.innerText;
+      dropdown.appendChild(option);
+    });
+  
+    dropdown.addEventListener('change', filterTable);
+    filterTable();
+  }
+  
+  function filterTable() {
+    const dropdown = document.getElementById('skillsDropdown');
+    const selectedSkill = dropdown.value;
+  
+    const tableCells = document.querySelectorAll(`#skillsTable td[name="${selectedSkill}"]`);
+    
+    tableCells.forEach(cell => {
+      cell.style.display = 'table-cell';
+    });
+  
+    const otherCells = document.querySelectorAll(`#skillsTable td:not([name="${selectedSkill}"])`);
+    otherCells.forEach(cell => {
+      cell.style.display = 'none';
+    });
+  
+    const skillsHead = document.getElementById('skillshead');
+    skillsHead.style.display = 'none';
+  }
+  
+  function toggleDropdown() {
+    const dropdown = document.getElementById('skillsDropdown');
+    const skillsTable = document.getElementById('skillsTable');
+    const skillsHead = document.getElementById('skillshead');
+  
+    if (window.innerWidth <= 768) {
+      createDropdown();
+      dropdown.classList.remove('hidden');
+      skillsTable.classList.add('hidden');
+      skillsHead.style.display = 'none';
+    } else {
+      dropdown.classList.add('hidden');
+      skillsTable.classList.remove('hidden');
+      skillsHead.style.display = 'table-header-group';
+    }
+  }
+  
+  window.addEventListener('load', toggleDropdown);
+  window.addEventListener('resize', toggleDropdown);
+  
 
 // Call the functions to set initial skill button colors and filter projects
 setSkillButtonColors();

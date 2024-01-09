@@ -174,10 +174,12 @@ Let’s connect and explore how my programming skills can bring value to your pr
     </section>
 
         <!-- Skills Section -->
+        
         <section id="skills" class="mt-4">
           <h2>Skills</h2>
-          <table class ="table table-hover" >
-            <thead>
+          <select id="skillsDropdown" class="hidden"></select>
+          <table class ="table table-hover" id="skillsTable">
+            <thead id="skillshead">
               <tr>
                 <th>Software Development</th>
                 <th>Technical Skills</th>
@@ -189,7 +191,7 @@ Let’s connect and explore how my programming skills can bring value to your pr
             </thead>
             <tbody>
               <tr>
-                <td>
+                <td name="Software Development">
                   <button class="skills-button">Flask</button>
                   <button class="skills-button">JavaScript</button>
                   <button class="skills-button">Python</button>
@@ -199,7 +201,7 @@ Let’s connect and explore how my programming skills can bring value to your pr
                   <button class="skills-button">React</button>
                   <button class="skills-button">AWS</button>
                 </td>
-                <td>
+                <td name="Technical Skills">
                   <button class="skills-button">Agile Methodologies (Scrum, Kanban)</button>
                   <button class="skills-button">Automation Tools (Selenium, AutoIT)</button>
                   <button class="skills-button">Database Management (SQL, SQLalchemy)</button>
@@ -209,80 +211,29 @@ Let’s connect and explore how my programming skills can bring value to your pr
                   <button class="skills-button">Version Control (Git, GitHub)</button>
                   <button class="skills-button">Web Development (HTML, CSS, JavaScript)</button>
                 </td>
-                <td>
+                <td name="Project Management Skills">
                   <button class="skills-button">Budgeting and Cost Control</button>
                   <button class="skills-button">Project Planning and Scheduling</button>
                   <button class="skills-button">Resource Allocation</button>
                   <button class="skills-button">Risk Management</button>
                   <button class="skills-button">Stakeholder Communication</button>
                 </td>
-                <td>
+                <td name="Data Analysis and Management">
                   <button class="skills-button">Data Cleaning and Integration</button>
                   <button class="skills-button">Data Visualization (Tableau, Power BI)</button>
                   <button class="skills-button">Statistical Analysis (Pandas, NumPy)</button>
                 </td>
-                <td>
+                <td name="Leadership and Team Collaboration">
                   <button class="skills-button">Collaboration and Teamwork</button>
                   <button class="skills-button">Mentorship and Training</button>
                   <button class="skills-button">Team Leadership</button>
                 </td>
-                <td>
+                <td name="Problem-Solving and Analytical Skills">
                   <button class="skills-button">Critical Thinking</button>
                   <button class="skills-button">Solution Development</button>
                   <button class="skills-button">Troubleshooting</button>
                 </tr>
-              
             </tbody>
-            <!-- <th>
-              <th >Software Development</th>
-              <td><button class="skills-button">Flask</button></td>
-              <td><button class="skills-button">JavaScript</button></td>
-              <td><button class="skills-button">Python</button></td>
-              <td><button class="skills-button">SQL</button></td>
-              <td><button class="skills-button">HTML</button></td>
-              <td><button class="skills-button">CSS</button></td>
-              <td><button class="skills-button">JavaScript</button></td>
-              <td><button class="skills-button">React</button></td>
-              <td><button class="skills-button">AWS</button></td>
-            </tr>
-            <tr>
-              <th>Technical Skills</th>
-              <td><button class="skills-button">Agile Methodologies (Scrum, Kanban)</button></td>
-              <td><button class="skills-button">Automation Tools (Selenium, AutoIT)</button></td>
-              <td><button class="skills-button">Database Management (SQL, SQLalchemy)</button></td>
-              <td><button class="skills-button">Programming Languages (Python, Java)</button></td>
-              <td><button class="skills-button">Software Development (Flask, Django)</button></td>
-              <td><button class="skills-button">Data Science (Pandas, NumPy, Matplotlib)</button></td>
-              <td><button class="skills-button">Version Control (Git, GitHub)</button></td>
-              <td><button class="skills-button">Web Development (HTML, CSS, JavaScript)</button></td>
-            </tr>
-            <tr>
-              <th>Project Management Skills</th>
-              <td><button class="skills-button">Budgeting and Cost Control</button></td>
-              <td><button class="skills-button">Project Planning and Scheduling</button></td>
-              <td><button class="skills-button">Resource Allocation</button></td>
-              <td><button class="skills-button">Risk Management</button></td>
-              <td><button class="skills-button">Stakeholder Communication</button></td>
-            </tr>
-            <tr>
-              <th>Data Analysis and Management</th>
-              <td><button class="skills-button">Data Cleaning and Integration</button></td>
-              <td><button class="skills-button">Data Visualization (Tableau, Power BI)</button></td>
-              <td><button class="skills-button">Statistical Analysis (Pandas, NumPy)</button></td>
-            </tr>
-            <tr>
-              <th>Leadership and Team Collaboration</th>
-              <td><button class="skills-button">Collaboration and Teamwork</button></td>
-              <td><button class="skills-button">Mentorship and Training</button></td>
-              <td><button class="skills-button">Team Leadership</button></td>
-            </tr>
-            <tr>
-              <th>Problem-Solving and Analytical Skills</th>
-              <td><button class="skills-button">Critical Thinking</button></td>
-              <td><button class="skills-button">Solution Development</button></td>
-              <td><button class="skills-button">Troubleshooting</button></td>
-            </tr> -->
-            <!-- Add more categories or skills as needed -->
           </table>
         </section>
         

@@ -165,3 +165,29 @@ body {
   text-align: left;
   background-color: #333; 
 }
+/* Default table style for larger screens */
+@media (min-width: 769px) {
+  #skillsTable {
+    display: block;
+    /* Your regular table styles for larger screens */
+  }
+}
+@media (min-width: 769px) {
+  #skillsDropdown {
+    display: none;
+    /* Your regular table styles for larger screens */
+  }
+}
+
+
+/* Styles for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+  #skillsTable #skillsDropdown #skillshead {
+    display: none; /* Hide the table for smaller screens */
+  }
+
+  /* Show dropdown list on smaller screens */
+  .skills-dropdown #skillsDropdown {
+    display: block; /* Show dropdown */
+  }
+}
