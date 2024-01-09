@@ -29,5 +29,67 @@ function erase() {
     }
 }
 
+
+
+// Define an object to map skills to their corresponding background colors
+const skillColors = {
+    'React': 'red',
+    'AWS': 'blue',
+    'Flask': 'Fuchsia',
+    'Python': 'yellow',
+    'JavaScript': 'orange',
+    'HTML': 'purple',
+    'CSS': 'pink',
+    'SQL': 'green',
+    'Git': 'brown'
+    
+
+    // Add more skills and colors as needed
+};
+
+// Function to set the background color of skill buttons based on text
+function setSkillButtonColors() {
+    const skillButtons = document.getElementsByClassName('skills-button');
+    for (let i = 0; i < skillButtons.length; i++) {
+        const skill = skillButtons[i].textContent.trim();
+        const color = skillColors[skill];
+        if (color) {
+            skillButtons[i].style.backgroundColor = color;
+        }
+    }
+}
+
+// Function to filter projects based on selected skills
+function filterProjects() {
+    const selectedSkills = Array.from(document.getElementsByClassName('skills-button'))
+        .filter(button => button.classList.contains('selected'))
+        .map(button => button.textContent.trim());
+
+    const projects = document.getElementsByClassName('project');
+    for (let i = 0; i < projects.length; i++) {
+        const projectSkills = projects[i].dataset.skills.split(',').map(skill => skill.trim());
+        if (selectedSkills.every(skill => projectSkills.includes(skill))) {
+            projects[i].style.display = 'block';
+        } else {
+            projects[i].style.display = 'none';
+        }
+    }
+}
+
+// Add event listeners to skill buttons
+const skillButtons = document.getElementsByClassName('skill-button');
+for (let i = 0; i < skillButtons.length; i++) {
+    skillButtons[i].addEventListener('click', function() {
+        this.classList.toggle('selected');
+        filterProjects();
+    });
+}
+
+// Call the functions to set initial skill button colors and filter projects
+setSkillButtonColors();
+filterProjects();
+
+
+
 // Start the typing animation
 type();

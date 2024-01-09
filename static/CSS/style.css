@@ -64,6 +64,18 @@ body {
   }
 }
 
+.skills-button{
+  background-color: #333;
+  border-radius: 10px;
+  border: none;
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 5px;
+  background-color: aqua;
+
+}
+
   .navbar-dark .navbar-nav .nav-link:hover {
     color: aqua;
   }
@@ -142,4 +154,14 @@ body {
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color: aqua; }
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 15px;
+  text-align: left;
+  background-color: #333; 
 }
