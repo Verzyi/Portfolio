@@ -103,15 +103,13 @@ function createDropdown() {
     const dropdown = document.getElementById('skillsDropdown');
     const selectedSkill = dropdown.value;
   
-    const tableCells = document.querySelectorAll(`#skillsTable td[name="${selectedSkill}"]`);
-    
-    tableCells.forEach(cell => {
-      cell.style.display = 'table-cell';
-    });
-  
-    const otherCells = document.querySelectorAll(`#skillsTable td:not([name="${selectedSkill}"])`);
-    otherCells.forEach(cell => {
-      cell.style.display = 'none';
+    const allCells = document.querySelectorAll('#skillsTable td');
+    allCells.forEach(cell => {
+      if (cell.getAttribute('name') === selectedSkill) {
+        cell.style.display = 'table-cell';
+      } else {
+        cell.style.display = 'none';
+      }
     });
   
     const skillsHead = document.getElementById('skillshead');
@@ -122,6 +120,7 @@ function createDropdown() {
     const dropdown = document.getElementById('skillsDropdown');
     const skillsTable = document.getElementById('skillsTable');
     const skillsHead = document.getElementById('skillshead');
+    const allCells = document.querySelectorAll('#skillsTable td');
   
     if (window.innerWidth <= 768) {
       createDropdown();
@@ -132,6 +131,9 @@ function createDropdown() {
       dropdown.classList.add('hidden');
       skillsTable.classList.remove('hidden');
       skillsHead.style.display = 'table-header-group';
+      allCells.forEach(cell => {
+        cell.style.display = 'table-cell';
+      });
     }
   }
   
