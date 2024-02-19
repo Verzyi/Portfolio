@@ -127,7 +127,6 @@ function createDropdown() {
     const skillsHead = document.getElementById('skillshead');
     const allCells = document.querySelectorAll('#skillsTable td');
 
-    console.log(screenWidth);
 
     if (screenWidth <= 768 || window.innerWidth <= 768) {
         filterTable();
