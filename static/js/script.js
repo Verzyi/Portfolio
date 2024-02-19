@@ -80,6 +80,7 @@ function filterProjects() {
 
 // Add event listeners to skill buttons
 const skillButtons = document.getElementsByClassName('skill-button');
+console.log(skillButtons.length);
 for (let i = 0; i < skillButtons.length; i++) {
     skillButtons[i].addEventListener('click', function() {
         this.classList.toggle('selected');
@@ -99,7 +100,7 @@ function createDropdown() {
     });
   
     dropdown.addEventListener('change', filterTable);
-    filterTable();
+    
   }
   
   function filterTable() {
@@ -124,28 +125,40 @@ function createDropdown() {
     const skillsTable = document.getElementById('skillsTable');
     const skillsHead = document.getElementById('skillshead');
     const allCells = document.querySelectorAll('#skillsTable td');
-  
-    if (window.innerWidth <= 768) {
-      createDropdown();
-      dropdown.classList.remove('hidden');
-      skillsTable.classList.add('hidden');
-      skillsHead.style.display = 'none';
-    } else {
-      dropdown.classList.add('hidden');
-      skillsTable.classList.remove('hidden');
-      skillsHead.style.display = 'table-header-group';
-      allCells.forEach(cell => {
-        cell.style.display = 'table-cell';
-      });
-    }
-  }
 
-  window.addEventListener('load', toggleDropdown);
-  window.addEventListener('resize', toggleDropdown);
-  
+    if (window.innerWidth <= 768) {
+        filterTable();
+        dropdown.classList.remove('hidden');
+        dropdown.style.display = 'block';
+        skillsTable.classList.add('hidden');
+        skillsHead.style.display = 'none';
+    } else {
+        dropdown.classList.add('hidden');
+        dropdown.style.display = 'none';
+        skillsTable.classList.remove('hidden');
+        skillsHead.style.display = 'table-header-group';
+        allCells.forEach(cell => {
+        cell.style.display = 'table-cell';
+        });
+        unfilterProjects(); // Call the unfilterProjects function
+    }
+}
+
+window.addEventListener('load', toggleDropdown);
+window.addEventListener('resize', toggleDropdown);
+
+// Function to unfilter projects
+function unfilterProjects() {
+    const projects = document.getElementsByClassName('project');
+    for (let i = 0; i < projects.length; i++) {
+        projects[i].style.display = 'block';
+    }
+}
+
 
 // Call the functions to set initial skill button colors and filter projects
 setSkillButtonColors();
+createDropdown();
 filterProjects();
 
 
