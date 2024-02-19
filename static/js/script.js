@@ -121,14 +121,15 @@ function createDropdown() {
   }
   
   function toggleDropdown() {
+    const screenWidth = window.screen.width;
     const dropdown = document.getElementById('skillsDropdown');
     const skillsTable = document.getElementById('skillsTable');
     const skillsHead = document.getElementById('skillshead');
     const allCells = document.querySelectorAll('#skillsTable td');
 
-    console.log(window.innerWidth);
+    console.log(screenWidth);
 
-    if (window.innerWidth <= 768) {
+    if (screenWidth <= 768 || window.innerWidth <= 768) {
         filterTable();
         dropdown.classList.remove('hidden');
         dropdown.style.display = 'block';
