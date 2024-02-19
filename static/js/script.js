@@ -126,6 +126,8 @@ function createDropdown() {
     const skillsHead = document.getElementById('skillshead');
     const allCells = document.querySelectorAll('#skillsTable td');
 
+    console.log(window.innerWidth);
+
     if (window.innerWidth <= 768) {
         filterTable();
         dropdown.classList.remove('hidden');
@@ -144,8 +146,11 @@ function createDropdown() {
     }
 }
 
+window.addEventListener('orientationchange', toggleDropdown);
 window.addEventListener('load', toggleDropdown);
 window.addEventListener('resize', toggleDropdown);
+
+
 
 // Function to unfilter projects
 function unfilterProjects() {
@@ -159,9 +164,6 @@ function unfilterProjects() {
 // Call the functions to set initial skill button colors and filter projects
 setSkillButtonColors();
 createDropdown();
-filterProjects();
-
-
 
 // Start the typing animation
 type();
