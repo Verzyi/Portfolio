@@ -2,18 +2,21 @@ let wordIndex = 0;
 let charIndex = 0;
 let words;
 
-if (window.innerWidth < 450) {
-    words = ['Front-End Dev', 'Back-End Dev', 'Full-Stack Dev', 'Python Dev', 'Engineer', 'Software Dev'];
-} else {
-    words = ['Front-End Developer', 'Back-End Developer', 'Full-Stack Developer', 'Python Developer', 'Software Engineer', 'Software Developer'];
-}
 function type() {
-    if (charIndex < words[wordIndex].length) {
-        document.getElementById('typing-text').innerHTML += words[wordIndex].charAt(charIndex);
-        charIndex++;
-        setTimeout(type, 100); // Adjust typing speed here (in milliseconds)
+  
+  // console.log(window.innerWidth);
+  if (window.innerWidth < 450) {
+        words = ['Front-End Dev', 'Back-End Dev', 'Full-Stack Dev', 'Python Dev', 'Engineer', 'Software Dev'];
     } else {
-        setTimeout(erase, 1500); // Time before erasing the word
+        words = ['Front-End Developer', 'Back-End Developer', 'Full-Stack Developer', 'Python Developer', 'Software Engineer', 'Software Developer'];
+    }
+
+    if (charIndex < words[wordIndex].length) {
+          document.getElementById('typing-text').innerHTML += words[wordIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(type, 100); // Adjust typing speed here (in milliseconds)
+    } else {
+          setTimeout(erase, 1500); // Time before erasing the word
     }
 }
 
@@ -136,7 +139,7 @@ function createDropdown() {
       });
     }
   }
-  
+
   window.addEventListener('load', toggleDropdown);
   window.addEventListener('resize', toggleDropdown);
   
@@ -149,3 +152,4 @@ filterProjects();
 
 // Start the typing animation
 type();
+

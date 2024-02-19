@@ -7,204 +7,190 @@ body {
     background-color: #333;
     color: #ffffff;
     margin: 0;
-    /* padding-top: 70px; Remove or adjust this line */
-  }
-  
-  .first-word {
+}
+
+.first-word {
     color: aqua;
-  }
-  .container {
+}
+
+.container {
     max-width: 800px;
     margin: 0 auto;
-  }
-  
-  /* Navigation Bar */
+}
 
-    .navbar {
-      position: sticky;
-      top: 0px;
-      background-color: #343a40 !important;
-      z-index: 9999; /* Make sure it stays on top */
-    }
+/* Navigation Bar */
+.navbar {
+    position: sticky;
+    top: 0px;
+    background-color: #343a40 !important;
+    z-index: 9999; /* Make sure it stays on top */
+}
 
-    .social-link img{
-      margin: 0 5px;
-      border-radius: 10%;
-      background-color: white;
-    }    
+.social-link img {
+    margin: 0 5px;
+    border-radius: 10%;
+    background-color: white;
+}
 
 /* Apply hover effect to the social links */
 .social-link:hover img {
-  background-color: aqua;
-  border-radius: 10%;
-  filter: brightness(1); /* Adjust brightness on hover */
+    background-color: aqua;
+    border-radius: 10%;
+    filter: brightness(1); /* Adjust brightness on hover */
 }
 
 #github-Logo {
-  background-color: #333!important;
-  border-radius: 50% !important;
+    background-color: #333!important;
+    border-radius: 50% !important;
 }
+
 #github-Logo:hover {
-  background-color: aqua!important;
-  border-radius: 50% !important;
+    background-color: aqua!important;
+    border-radius: 50% !important;
 }
-  
-  
-  .navbar-dark .navbar-nav .nav-link {
+
+.navbar-dark .navbar-nav .nav-link {
     color: #fff;
     border-radius: 5px;
-  }
-  
+}
+
 /* For small screens */
 @media (max-width: 768px) {
-  .navbar-dark .navbar-nav .nav-link:hover {
-    color: aqua;
-    background-color: rgba(0, 255, 255, 0.5); 
-    border-radius: 5px;
-  }
+    .navbar-dark .navbar-nav .nav-link:hover {
+        color: aqua;
+        background-color: rgba(0, 255, 255, 0.5); 
+        border-radius: 5px;
+    }
 }
 
-.skills-button{
-  background-color: #333;
-  border-radius: 10px;
-  border: none;
-  color: black;
-  font-size: 15px;
-  font-weight: 700;
-  margin: 5px;
-  background-color: aqua;
-
+.skills-button {
+    background-color: #333;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 5px;
+    background-color: aqua;
 }
 
-  .navbar-dark .navbar-nav .nav-link:hover {
+.navbar-dark .navbar-nav .nav-link:hover {
     color: aqua;
-  }
-  
-  /* Sections */
-  section {
+}
+
+/* Sections */
+section {
     margin-bottom: 40px;
-  }
-  
-  h2 {
+}
+
+h2 {
     font-size: 28px;
     margin-bottom: 20px;
-  }
-  
-  ul {
+}
+
+ul {
     list-style-type: none;
     padding-left: 0;
-  }
-  
-  .card {
+}
+
+.card {
     margin-bottom: 20px;
-  }
-  
-  .card-body {
+}
+
+.card-body {
     background-color: #333;
     border-radius: 4px;
     padding: 20px;
     box-shadow: 1px 1px 4px 2px aqua;
-  }
-  
-  .card-title {
+}
+
+.card-title {
     font-size: 24px;
     margin-bottom: 10px;
-  }
-  
-  .card-text {
+}
+
+.card-text {
     font-size: 16px;
-  }
-  
-  .btn-primary {
-    /* background-color: #0056b3; */
+}
+
+.btn-primary {
     background-color: aqua;
     color: #333;
     border: none;
     border-radius: 15px;
     padding: 5px;
     margin: 5px;
-  }
-  
-  .btn-primary:hover {
+}
+
+.btn-primary:hover {
     background-color: #333;
     color: aqua;
     border-style: solid;
     border-width: 2px;
     border-color: aqua;
-    
-  }
-  
+}
 
-  /* Optional: Style the typing animation */
+/* Optional: Style the typing animation */
 .typewriter {
-  color: aqua;
-  overflow: hidden; /* Ensures the text is not revealed until the animation */
-  border-right: 0.08em solid aqua; /* Cursor effect */
-  white-space: nowrap; /* Keeps the text on one line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.1em; /* Adjust spacing between characters */
-  animation: typing 3.5s steps(40, end), blink-caret 0.5s step-end infinite alternate;
+    color: aqua;
+    overflow: hidden; /* Ensures the text is not revealed until the animation */
+    border-right: 0.08em solid aqua; /* Cursor effect */
+    white-space: nowrap; /* Keeps the text on one line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.1em; /* Adjust spacing between characters */
+    animation: typing 3.5s steps(40, end), blink-caret 0.5s step-end infinite alternate;
 }
 
 /* Typing animation */
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 /* Cursor animation (optional) */
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: aqua; }
+    from, to { border-color: transparent; }
+    50% { border-color: aqua; }
 }
 
 .table {
-  color: #ffffff;
-  font-family: monospace;
-  width: auto;
-  border-collapse: collapse;
+    color: #ffffff;
+    font-family: monospace;
+    width: auto;
+    border-collapse: collapse;
 }
 
-th{
-  margin: 0px;
-  padding: 5px;
-  font-size: 16px;
+th {
+    margin: 0px;
+    padding: 5px;
+    font-size: 16px;
 }
 
-tr, td{
-  vertical-align: top;
-  border-color:aqua;
-  border-style: solid;
-  border-width: 0px;
-  border-radius: 5px;
-  padding: 5px;
-  font-size: 16px;
-  box-shadow: 1px 1px 4px 2px aqua;
+tr, td {
+    vertical-align: top;
+    border-color: aqua;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    box-shadow: 1px 1px 4px 2px aqua;
 }
-
-/* Default table style for larger screens */
-@media (min-width: 769px) {
-  #skillsTable {
-    display: block;
-    /* Your regular table styles for larger screens */
-  }
-}
-@media (min-width: 769px) {
-  #skillsDropdown {
-    display: none;
-    /* Your regular table styles for larger screens */
-  }
-}
-
 
 /* Styles for smaller screens (max-width: 768px) */
 @media (max-width: 768px) {
-  #skillsTable #skillsDropdown #skillshead {
-    display: none; /* Hide the table for smaller screens */
-  }
+    /* Show dropdown list on smaller screens */
+    #skillsDropdown {
+        display: block;
+    }
+    
+    /* Hide the table headers for smaller screens */
+    #skillsTable th {
+        display: none;
+    }
 
-  /* Show dropdown list on smaller screens */
-  .skills-dropdown #skillsDropdown {
-    display: block; /* Show dropdown */
-  }
+    /* Show table data as block elements for smaller screens */
+    #skillsTable td {
+        display: block;
+    }
 }
